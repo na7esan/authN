@@ -27,4 +27,5 @@ Route::post('register',[RegisterController::class,'store']);
 // 認証系ルート
 Route::middleware(['auth'])->group(function () {
     Route::get('users/index', [UserController::class, 'index'])->name('users.index');
+    Route::post('logout', [LoginController::class, 'store'])->name('logout');
 });
