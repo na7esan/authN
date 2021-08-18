@@ -8,6 +8,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return 'ここにホームページを表示';
+        return view('top');
     }
 }
