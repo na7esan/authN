@@ -19,7 +19,12 @@ class RegisterController extends Controller
 
         // 会員登録処理を行う
 
-        $user=User::create($request->all());
+        $user=User::create([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'password'=>bcrypt($request->password),
+        ]);
+
         Auth::login($user);
 
         return redirect()

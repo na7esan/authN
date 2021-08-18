@@ -18,7 +18,7 @@
             @auth
                 {{-- 認証済みナビ --}}
                 <li>
-                    <a href="#">会員一覧</a>
+                    <a href="{{ route('users.index') }}">会員一覧</a>
                 </li>
 
                 <li>

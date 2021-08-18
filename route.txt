@@ -1,0 +1,16 @@
++--------+----------+---------------------+-------------+------------------------------------------------------------+------------------------------------------+
+| Domain | Method   | URI                 | Name        | Action                                                     | Middleware                               |
++--------+----------+---------------------+-------------+------------------------------------------------------------+------------------------------------------+
+|        | GET|HEAD | /                   | top         | App\Http\Controllers\HomeController@index                  | web                                      |
+|        | GET|HEAD | api/user            |             | Closure                                                    | api                                      |
+|        |          |                     |             |                                                            | App\Http\Middleware\Authenticate:sanctum |
+|        | GET|HEAD | login               | login       | App\Http\Controllers\auth\LoginController@create           | web                                      |
+|        | POST     | login               |             | App\Http\Controllers\auth\LoginController@store            | web                                      |
+|        | POST     | logout              | logout      | App\Http\Controllers\auth\LogoutController@logout          | web                                      |
+|        |          |                     |             |                                                            | App\Http\Middleware\Authenticate         |
+|        | GET|HEAD | register            | register    | App\Http\Controllers\auth\RegisterController@create        | web                                      |
+|        | POST     | register            |             | App\Http\Controllers\auth\RegisterController@store         | web                                      |
+|        | GET|HEAD | sanctum/csrf-cookie |             | Laravel\Sanctum\Http\Controllers\CsrfCookieController@show | web                                      |
+|        | GET|HEAD | users/index         | users.index | App\Http\Controllers\UserController@index                  | web                                      |
+|        |          |                     |             |                                                            | App\Http\Middleware\Authenticate         |
++--------+----------+---------------------+-------------+------------------------------------------------------------+------------------------------------------+
