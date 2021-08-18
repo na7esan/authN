@@ -11,6 +11,7 @@ https://readouble.com/laravel/8.x/ja/authentication.html
 
 【URL設計】
 非認証ルート
+GEt /
 GET register
 POST register
 GET login
@@ -21,3 +22,6 @@ GET users
 
 【サイト内容】
 会員登録後に登録ユーザーの一覧を閲覧できる
+
+【モデル】
+User
