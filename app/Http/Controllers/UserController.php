@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
     public function index()
     {
-        return 'ユーザ一覧表示処理を行う';
+        $users=User::all();
+
+
+        return view('users.index',['users'=>$users]);
     }
 }
