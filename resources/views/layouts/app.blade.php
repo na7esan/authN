@@ -34,6 +34,10 @@
                     <a href="#">ログイン</a>
                 </li>
 
+                <li>
+                    <a href="{{ route('register') }}">会員登録</a>
+                </li>
+
             @endauth
         </ul>
     </nav>

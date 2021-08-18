@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\auth\RegisterController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,10 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[HomeController::class,'index'])->name('top');
 
 
 // 非認証系ルート
+Route::get('/',[HomeController::class,'index'])->name('top');
+Route::get('register',[RegisterController::class,'create'])->name('register');
+Route::post('register',[RegisterController::class,'store']);
 
 
 // 認証系ルート
