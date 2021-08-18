@@ -24,7 +24,7 @@
                 <li>
                     <form method="post" action="{{ route('logout') }}">
                         @csrf
-                        
+
                         <button type="submit">ログアウト</button>
                     </form>
                 </li>
@@ -32,7 +32,7 @@
             @else
                 {{-- 非認証ナビ --}}
                 <li>
-                    <a href="#">ログイン</a>
+                    <a href="{{ route('login') }}">ログイン</a>
                 </li>
 
                 <li>

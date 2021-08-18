@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\auth\LoginController;
 use App\Http\Controllers\auth\LogoutController;
 use App\Http\Controllers\auth\RegisterController;
 use App\Http\Controllers\HomeController;
@@ -23,6 +24,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class,'index'])->name('top');
 Route::get('register',[RegisterController::class,'create'])->name('register');
 Route::post('register',[RegisterController::class,'store']);
+// ログイン処理
+Route::get('login',[LoginController::class,'create'])->name('login');
+Route::post('login',[LoginController::class,'store']);
 
 
 // 認証系ルート
